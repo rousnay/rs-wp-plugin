@@ -38,3 +38,14 @@ with this program. If not, visit: https://www.gnu.org/licenses/
 // }
 
 // add_filter('the_content', 'rs_filter_test');
+
+// do stuff with activation hook
+// function myplugin_on_activation()
+// {
+
+//     if (!current_user_can('activate_plugins')) return;
+
+//     add_option('myplugin_posts_per_page', 10);
+//     add_option('myplugin_show_welcome_page', true);
+// }
+// register_activation_hook(__FILE__, 'myplugin_on_activation');
