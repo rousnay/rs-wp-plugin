@@ -67,3 +67,15 @@ with this program. If not, visit: https://www.gnu.org/licenses/
 //     delete_option('myplugin_show_welcome_page', true);
 // }
 // register_uninstall_hook(__FILE__, 'myplugin_on_uninstall');
+
+// // pluggable function
+// function wp_logout() {
+// 	wp_destroy_current_session();
+// 	wp_clear_auth_cookie();
+// 	myplugin_custom_logout();
+// 	do_action( 'wp_logout' );
+// }
+// // customize logout function
+// function myplugin_custom_logout() {
+// 	// do something when the user logs out..
+// }
