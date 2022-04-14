@@ -30,22 +30,32 @@ with this program. If not, visit: https://www.gnu.org/licenses/
 // }
 // add_action('init', 'rs_wp_email');
 
+
 // #using filter hook with the_content hook;
 // function rs_filter_test($content)
 // {
 //     $content = $content . '<p>Custom content.. </p>';
 //     return $content;
 // }
-
 // add_filter('the_content', 'rs_filter_test');
+
 
 // do stuff with activation hook
 // function myplugin_on_activation()
 // {
-
 //     if (!current_user_can('activate_plugins')) return;
-
 //     add_option('myplugin_posts_per_page', 10);
 //     add_option('myplugin_show_welcome_page', true);
 // }
 // register_activation_hook(__FILE__, 'myplugin_on_activation');
+
+
+// do stuff with deactivation hook
+// function myplugin_on_deactivation() {
+
+// 	if ( ! current_user_can( 'activate_plugins' ) ) return;
+
+// 	flush_rewrite_rules();
+
+// }
+// register_deactivation_hook( __FILE__, 'myplugin_on_deactivation' );
