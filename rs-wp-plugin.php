@@ -51,11 +51,19 @@ with this program. If not, visit: https://www.gnu.org/licenses/
 
 
 // do stuff with deactivation hook
-// function myplugin_on_deactivation() {
-
-// 	if ( ! current_user_can( 'activate_plugins' ) ) return;
-
-// 	flush_rewrite_rules();
-
+// function myplugin_on_deactivation()
+// {
+//     if (!current_user_can('activate_plugins')) return;
+//     flush_rewrite_rules();
 // }
-// register_deactivation_hook( __FILE__, 'myplugin_on_deactivation' );
+// register_deactivation_hook(__FILE__, 'myplugin_on_deactivation');
+
+
+// do stuff with uninstall hook
+// function myplugin_on_uninstall()
+// {
+//     if (!current_user_can('activate_plugins')) return;
+//     delete_option('myplugin_posts_per_page', 10);
+//     delete_option('myplugin_show_welcome_page', true);
+// }
+// register_uninstall_hook(__FILE__, 'myplugin_on_uninstall');
