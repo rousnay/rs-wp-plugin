@@ -23,9 +23,18 @@ with this program. If not, visit: https://www.gnu.org/licenses/
 
 */
 
-// using wp_mail();
+// #using action hook with init hook & wp_mail();
 // function rs_wp_email()
 // {
 //     wp_mail('test@email.com', 'Subject', 'Message...');
 // }
 // add_action('init', 'rs_wp_email');
+
+// #using filter hook with the_content hook;
+// function rs_filter_test($content)
+// {
+//     $content = $content . '<p>Custom content.. </p>';
+//     return $content;
+// }
+
+// add_filter('the_content', 'rs_filter_test');
