@@ -22,3 +22,10 @@ You should have received a copy of the GNU General Public License
 with this program. If not, visit: https://www.gnu.org/licenses/
 
 */
+
+// using wp_mail();
+// function rs_wp_email()
+// {
+//     wp_mail('test@email.com', 'Subject', 'Message...');
+// }
+// add_action('init', 'rs_wp_email');
